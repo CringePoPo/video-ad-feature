@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Video Popup Example</title>
+</head>
+<body>
+  <h2 class="title">New advertiser</h2>
+  <div class="video-container">
+    <video id="video" controls muted autoplay>
+      <!-- Add your video source here -->
+      <source src="./EP.4.v0.1690479614.360p.mp4" type="video/mp4">
+      <!-- Add other video source formats if needed -->
+    </video>
+    <button id="playButton">Chekout our Advertiser</button>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <!-- Add your popup content here -->
+        <div class="popup-content-top">
+          <div class="logo-container">
+            <img src="./img/twellium.png" alt="Company Logo">
+          </div>
+           
+        </div>
+        <div class="advertiser-details">
+          <div class="company-name">
+            <h2>Twellium Industrial Company</h2>
+
+            <!-- <p>Food manufacturing company</p> -->
+          </div>
+            <div class="ad-link">
+                <img src="./assets/globe.svg" alt="External link svg">
+                <a href="#" target="_blank">www.twelliumghana.com</a>  
+        </div>
+            <div class="ad-numbers">
+                <img src="./assets/phone-outgoing.svg" alt="External s svvg">
+                <a href="#" >
+                054 884 9596
+            </a>  
+            </div>
+            <div class="ad-numbers">
+              <img src="./assets/whatsapp.svg" alt="External s svvg">
+              <a href="#" >
+              054 884 9596
+          </a>  
+          </div>
+            <!-- <div class="ad-socials">
+              <div>
+                <img src="./img/facebook icon.png" alt="facebook">
+                <a href="#">@twelliumgh</a>
+
+              </div>
+              <div>
+                <img src="./img/twitter.png" alt="Instagram">
+
+                <a href="#">@twelliumgh</a>
+
+              </div>
+              <div>
+                <img src="./img/instagram.png" alt="">
+
+                <a href="#">@twelliumgh</a>
+              </div>
+               
+            </div> -->
+        </div>
+        <div class="btn-wrapper">
+            <button id="closeButton"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const playButton = document.getElementById('playButton');
+    const popup = document.getElementById('popup');
+    const closeButton = document.getElementById('closeButton');
+    const video = document.getElementById('video');
+  
+    setTimeout(() => {
+        playButton.style.display= "block"
+        playButton.classList.add('smooth')
+    }, 5000);
+    // Show the popup when the play button is clicked
+    playButton.addEventListener('click', () => {
+      // Pause the video before showing the popup
+      video.pause();
+  
+      // Show the popup
+      popup.style.display = 'block';
+    });
+  
+    // Hide the popup when the close button is clicked
+    closeButton.addEventListener('click', () => {
+      // Resume the video after closing the popup
+      video.play();
+  
+      // Hide the popup
+      popup.style.display = 'none';
+    });
+  </script>
+  
+
+  
+</body>
+</html>
