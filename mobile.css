@@ -155,7 +155,7 @@ height: 60%;
       flex-wrap: wrap;
       gap: 5px;
     }
-    .ad-socials div, .ad-link, .ad-numbers{
+    .ad-socials div, .company-link, .ad-numbers{
       display: flex;
       align-items: center;
       gap: 5px;
